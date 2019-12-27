@@ -3,7 +3,7 @@ const { promisify } = require("util");
 const { BMP_HEAD, BMP_END } = require("./constants");
 const promReadFile = promisify(readFile);
 
-module.exports = (imageFile, scriptFile, outFile) =>
+module.exports = (imageFile, scriptFile) =>
   Promise.all([promReadFile(imageFile), promReadFile(scriptFile)]).then(
     ([imageBuf, scriptBuf]) => {
       const bufs = [
@@ -13,6 +13,6 @@ module.exports = (imageFile, scriptFile, outFile) =>
         scriptBuf
       ];
       const length = bufs.reduce((a, b) => a + b.length, 0);
-      writeFileSync(outFile, Buffer.concat(bufs, length));
+      return Buffer.concat(bufs, length);
     }
   );
