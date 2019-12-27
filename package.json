@@ -1,0 +1,13 @@
+{
+  "name": "js-bmp-packer",
+  "version": "0.0.1",
+  "description": "Packs javascript and a bmp image file that can be served as a valid script file",
+  "main": "./src/index.js",
+  "author": "reimu <r2hkri@gmail.com>",
+  "license": "GPL",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rei2hu/js-bmp-packer.git"
+  }
+}
