@@ -9,5 +9,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rei2hu/js-bmp-packer.git"
+  },
+  "scripts": {
+    "test": "node test"
   }
 }
